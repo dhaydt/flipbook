@@ -31,7 +31,7 @@ class FlipController extends Controller
     public function generate(Request $request)
     {
         $pdf = $request->file('filePdf');
-        $name = $request->title;
+        $name = urlencode($request->title);
         $type = $request->type;
         $sector = $request->sector;
         $desc = $request->desc;
